@@ -1,11 +1,11 @@
-t = int(input())
-
-for _ in range(t):
-    a, b = map(int, input().split())
-    
-    remainder = a % b
-    
-    if remainder == 0:
-        print(0)
-    else:
-        print(b - remainder)
+n, m = map(int, input().split())
+color = False
+for _ in range(n):
+    pixels = input().split()
+    for pixel in pixels:
+        if pixel == 'C' or pixel == 'M' or pixel == 'Y':
+            color = True
+if color:
+    print("#Color")
+else:
+    print("#Black&White")
