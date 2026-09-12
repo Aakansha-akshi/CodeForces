@@ -1,0 +1,13 @@
+n = int(input())
+events = list(map(int, input().split()))
+officers = 0
+unsolved = 0
+for x in events:
+    if x == -1:
+        if officers > 0:
+            officers -= 1
+        else:
+            unsolved += 1
+    else:
+        officers += x
+print(unsolved)
