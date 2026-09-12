@@ -1,0 +1,32 @@
+s = input()
+t = input()
+
+x1 = ord(s[0])
+y1 = int(s[1])
+
+x2 = ord(t[0])
+y2 = int(t[1])
+
+dx = x2 - x1
+dy = y2 - y1
+
+print(max(abs(dx), abs(dy)))
+
+while dx != 0 or dy != 0:
+    move = ""
+
+    if dx > 0:
+        move += "R"
+        dx -= 1
+    elif dx < 0:
+        move += "L"
+        dx += 1
+
+    if dy > 0:
+        move += "U"
+        dy -= 1
+    elif dy < 0:
+        move += "D"
+        dy += 1
+
+    print(move)
