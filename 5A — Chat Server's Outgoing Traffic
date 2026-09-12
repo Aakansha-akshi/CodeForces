@@ -1,0 +1,16 @@
+people = set()
+traffic = 0
+while True:
+    try:
+        command = input()
+    except EOFError:
+        break
+    if command[0] == '+':
+        people.add(command[1:])
+    elif command[0] == '-':
+        people.remove(command[1:])
+    else:
+        name, message = command.split(':', 1)
+        traffic += len(message) * len(people)
+
+print(traffic)
